@@ -4,7 +4,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import BasicDatePicker from './DatePicker';
-import image from "./picture/Etage2.png";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -22,7 +23,7 @@ const Item = styled(Paper)(({ theme }) => ({
           <Item><BasicDatePicker/></Item>
         </Grid>
         <Grid item xs={10} md={10}>
-          <Item><img scr={image} alt="Raumplan 2. Etage" /></Item>
+          <Item></Item>
         </Grid>
         <Grid item xs={2} md={2}>
           <Item>xs=2 md=2</Item>
