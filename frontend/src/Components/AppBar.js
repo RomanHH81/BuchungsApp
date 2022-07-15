@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
 
-const pages = ['Tiefgarage', '1. Etage', '2. Etage', '3. Etage', '4. Etage', '5. Etage', '6. Etage'];
+const pages = ['Tiefgarage', '1. Etage', '2. Etage', '3. Etage', '4. Etage', '5. Etage'];
 const settings = ['Profile', 'Logout'];
 
 const ResponsiveAppBar = ({activePage, setActivePage}) => {
@@ -53,12 +53,12 @@ const ResponsiveAppBar = ({activePage, setActivePage}) => {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.5rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            HOME
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -92,7 +92,7 @@ const ResponsiveAppBar = ({activePage, setActivePage}) => {
             >
               {pages.map(page => (
                 <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" fontFamily={'arial'}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -131,7 +131,7 @@ const ResponsiveAppBar = ({activePage, setActivePage}) => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Avatar" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

@@ -1,9 +1,9 @@
 
 import ImageMarker from "react-image-marker";
-import floor3 from "../picture/floor3.jpg";
+import bodyImage from "./picture/carpark.jpeg";
 import { useState } from "react";
 
-export default function Floor1Marker () {
+export default function Marker () {
   let [markers, setMarkers] = useState([]);
 
   const CustomMarker = () => {
@@ -27,7 +27,7 @@ export default function Floor1Marker () {
         Remove Marker
       </button>
       <ImageMarker
-        src={floor3}
+        src={bodyImage}
         markers={markers}
         onAddMarker={(marker) => setMarkers((prev) => [...prev, marker])}
         markerComponent={CustomMarker}
@@ -35,4 +35,3 @@ export default function Floor1Marker () {
     </div>
   );
 }
-

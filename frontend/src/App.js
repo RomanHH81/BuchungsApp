@@ -1,13 +1,10 @@
-import './App.css';
-
 import { useState, useEffect } from "react";
-
-import ResponsiveAppBar from './Components/AppBar';
-import FullWidthGrid from './Components/FullWidthGrid';
-import { Grid } from '@mui/material';
+import Floor1Marker from "./Components/ImageMarker";
+import ResponsiveAppBar from "./Components/AppBar";
+import FullWidthGrid from "./Components/FullWidthGrid";
+import { Grid } from "@mui/material";
 
 function App() {
-
   const [activePage, setActivePage] = useState("");
 
   useEffect(() => {
@@ -17,8 +14,9 @@ function App() {
   return (
     <div>
       <ResponsiveAppBar activePage={activePage} setActivePage={setActivePage} />
-        <FullWidthGrid activePage={activePage} setActivePage={setActivePage} />
-      <Grid/>       
+      <FullWidthGrid activePage={activePage} setActivePage={setActivePage} />
+
+      <Grid />
     </div>
   );
 }

@@ -1,9 +1,37 @@
-import React from 'react'
 
-function Floor4() {
+import ImageMarker from "react-image-marker";
+import floor4 from "../picture/floor4.jpg";
+import { useState } from "react";
+
+export default function Floor1Marker () {
+  let [markers, setMarkers] = useState([]);
+
+  const CustomMarker = () => {
+    return (
+      <div
+        className="image-marker__marker image-marker__marker--default"
+        data-testid="marker"
+      ></div>
+    );
+  };
+
   return (
-    <div>Floor4</div>
-  )
+    <div>
+      <button disabled={!markers.length > 0} onClick={() => setMarkers([])}>
+        Reset
+      </button>
+      <button
+        disabled={!markers.length > 0}
+        onClick={() => setMarkers((prev) => prev.slice(0, -1))}
+      >
+        Remove Marker
+      </button>
+      <ImageMarker
+        src={floor4}
+        markers={markers}
+        onAddMarker={(marker) => setMarkers((prev) => [...prev, marker])}
+        markerComponent={CustomMarker}
+      />
+    </div>
+  );
 }
-
-export default Floor4
