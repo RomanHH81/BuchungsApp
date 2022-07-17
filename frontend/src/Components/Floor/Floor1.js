@@ -15,6 +15,10 @@ export default function Floor1Marker () {
     );
   };
 
+  const savePoints = () => {
+    console.log(markers);
+  }
+
   return (
     <div>
       <button disabled={!markers.length > 0} onClick={() => setMarkers([])}>
@@ -25,6 +29,9 @@ export default function Floor1Marker () {
         onClick={() => setMarkers((prev) => prev.slice(0, -1))}
       >
         Remove Marker
+      </button>
+      <button onClick={savePoints} > 
+        Save
       </button>
       <ImageMarker
         src={floor1}

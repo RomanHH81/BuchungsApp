@@ -62,4 +62,3 @@ const FullWidthGrid = ({activePage, setActivePage}) => {
 }
 
 export default FullWidthGrid;
-

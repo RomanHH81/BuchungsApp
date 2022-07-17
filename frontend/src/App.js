@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Floor1Marker from "./Components/ImageMarker";
 import ResponsiveAppBar from "./Components/AppBar";
 import FullWidthGrid from "./Components/FullWidthGrid";
 import { Grid } from "@mui/material";
