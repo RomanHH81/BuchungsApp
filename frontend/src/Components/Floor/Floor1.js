@@ -1,7 +1,8 @@
 
 import ImageMarker from "react-image-marker";
 import floor1 from "../picture/floor1.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios"
 
 export default function Floor1Marker () {
   let [markers, setMarkers] = useState([]);
@@ -18,6 +19,12 @@ export default function Floor1Marker () {
   const savePoints = () => {
     console.log(markers);
   }
+
+  useEffect(() => {
+    axios.get("Floors.json").then(res => {
+      console.log(res.data.floor1);
+    })
+  }, [])
 
   return (
     <div>

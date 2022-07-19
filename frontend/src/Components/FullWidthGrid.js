@@ -45,10 +45,10 @@ const FullWidthGrid = ({activePage, setActivePage}) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid item xs={2} md={2}>
+        <Grid item xs={3} md={3}>
           <Item><BasicDatePicker/></Item>
         </Grid>
-        <Grid item xs={10} md={10}>
+        <Grid item xs={9} md={9}>
           <Item>
             <Floor />
           </Item>

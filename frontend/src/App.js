@@ -6,6 +6,8 @@ import { Grid } from "@mui/material";
 function App() {
   const [activePage, setActivePage] = useState("");
 
+ const [floors, setFloors] = useState({});
+
   useEffect(() => {
     setActivePage("1. Etage");
   }, []);

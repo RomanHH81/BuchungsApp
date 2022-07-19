@@ -1,0 +1,30 @@
+{
+    "floor1": [  
+    {
+        "Arbeitsplatz":  "1.1.1",
+        "Koordinaten_Top": 93.25221238938053,
+        "Koordinaten_Left": 16.780906763564293,
+        "Tischtyp": "elektrisch",
+        "Monitoranzahl": 2,
+        "Telefon": "Ja",
+        "Headset": "Ja",
+        "Dockingstationstyp": "USB C"
+    }, 
+    {
+        "Arbeitsplatz":  "1.1.2",
+        "Koordinaten_Top": 83.84955752212389,
+        "Koordinaten_Left": 14.138244281113222,
+        "Tischtyp": "elektrisch",
+        "Monitoranzahl": 2,
+        "Telefon": "Ja",
+        "Headset": "Ja",
+        "Dockingstationstyp": "USB C"
+    }
+    ],
+    "floor2": [
+        
+    ]
+    
+    
+   
+}
