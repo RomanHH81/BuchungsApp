@@ -4,7 +4,7 @@ import floor1 from "../picture/floor1.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios"
 
-export default function Floor1Marker () {
+export default function Floor1Marker({ floors }) {
   let [markers, setMarkers] = useState([]);
 
   const CustomMarker = () => {
@@ -20,10 +20,16 @@ export default function Floor1Marker () {
     console.log(markers);
   }
 
-  useEffect(() => {
-    axios.get("Floors.json").then(res => {
-      console.log(res.data.floor1);
+  const getPoints = () => {
+    const returnArray = [];
+    floors.floor1.map(e => {
+      returnArray.push({top: e.Koordinaten_Top, left: e.Koordinaten_Left})
     })
+    return returnArray;
+  }
+
+  useEffect(() => {
+    setMarkers(getPoints())
   }, [])
 
   return (

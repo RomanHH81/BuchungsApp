@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import BasicDatePicker from './DatePicker';
 
 
-import CarPark from "./Floor/Carpark";
+import CarPark from "./Floor/CarPark";
 import Floor1 from "./Floor/Floor1";
 import Floor2 from "./Floor/Floor2";
 import Floor3 from "./Floor/Floor3";
@@ -21,22 +21,22 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const FullWidthGrid = ({activePage, setActivePage}) => {
+const FullWidthGrid = ({activePage, setActivePage, floors}) => {
 
   const Floor = () => {
     switch (activePage) {
       case "Tiefgarage":
-        return <CarPark />;
+        return <CarPark floors={floors} />;
       case "1. Etage":
-        return <Floor1 />;
+        return <Floor1 floors={floors} />;
       case "2. Etage":
-        return <Floor2 />;
+        return <Floor2 floors={floors} />;
       case "3. Etage":
-        return <Floor3 />;
+        return <Floor3 floors={floors} />;
       case "4. Etage":
-        return <Floor4 />;
+        return <Floor4 floors={floors} />;
       case "5. Etage":
-        return <Floor5 />;     
+        return <Floor5 floors={floors} />;     
       default:
         return null
     }

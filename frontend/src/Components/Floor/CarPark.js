@@ -1,6 +1,6 @@
 
 import ImageMarker from "react-image-marker";
-import carpark from "../picture/carpark.jpeg";
+import carpark from "../picture/CarPark.jpeg";
 import { useState } from "react";
 
 export default function Floor1Marker () {
