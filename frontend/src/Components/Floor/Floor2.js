@@ -1,9 +1,9 @@
 
 import ImageMarker from "react-image-marker";
 import floor2 from "../picture/floor2.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Floor1Marker () {
+export default function Floor1Marker({ floors }) {
   let [markers, setMarkers] = useState([]);
 
   const CustomMarker = () => {
@@ -15,6 +15,18 @@ export default function Floor1Marker () {
     );
   };
 
+  const getPoints = () => {
+    const returnArray = [];
+    floors.floor2.map(e => {
+      returnArray.push({top: e.Koordinaten_Top, left: e.Koordinaten_Left})
+    })
+    return returnArray;
+  }
+
+  useEffect(() => {
+    setMarkers(getPoints())
+  }, [])
+  
   return (
     <div>
       <button disabled={!markers.length > 0} onClick={() => setMarkers([])}>

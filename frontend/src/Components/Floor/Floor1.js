@@ -2,7 +2,7 @@
 import ImageMarker from "react-image-marker";
 import floor1 from "../picture/floor1.jpg";
 import { useEffect, useState } from "react";
-import axios from "axios"
+import Tooltip from '@mui/material/Tooltip';
 
 export default function Floor1Marker({ floors }) {
   let [markers, setMarkers] = useState([]);
@@ -46,12 +46,15 @@ export default function Floor1Marker({ floors }) {
       <button onClick={savePoints} > 
         Save
       </button>
-      <ImageMarker
-        src={floor1}
-        markers={markers}
-        onAddMarker={(marker) => setMarkers((prev) => [...prev, marker])}
-        markerComponent={CustomMarker}
-      />
+      <Tooltip title="Delete">
+       
+      </Tooltip>
+       <ImageMarker
+          src={floor1}
+          markers={markers}
+          onAddMarker={(marker) => setMarkers((prev) => [...prev, marker])}
+          markerComponent={CustomMarker}
+        />
     </div>
   );
 }
